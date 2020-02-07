@@ -1,0 +1,1216 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <style>
+        .newsbtn {
+            padding: 5px 40px;
+            border: 2px solid #000;
+            border-radius: 30px;
+            box-shadow: 2px 4px 8px #a6a6a6;
+        }
+
+
+
+
+        .news .row {
+            position: relative;
+        }
+
+        .news .card-body {
+            padding: 2px 0px;
+        }
+
+        .newsinfo {
+            display: flex;
+            margin: 5px 0px 20px 0px;
+        }
+
+
+
+        .newsinfo p {
+            font-size: 10px;
+        }
+
+
+        .hoversearch {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 15%;
+            left: 45%;
+            color: #fff;
+            font-size: 30px;
+            opacity: 0;
+        }
+
+        .searchimg:hover+.hoversearch,
+        .hoversearch:hover {
+            opacity: 1;
+        }
+
+        .radius {
+            border-radius: 50%;
+            border: 7px solid white;
+            color: white;
+            background-color: transparent;
+        }
+
+        .main {
+            background: url("./images/header-bg-1.jpg") no-repeat;
+        }
+
+        .bg {
+            background-color: navy;
+            opacity: 0.9;
+        }
+
+        .first {
+            background-color: navy;
+            opacity: 0.9;
+            height: 50vw;
+        }
+
+        .bg1 {
+            background-color: navy;
+            opacity: 0.9;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .width {
+            width: 100%;
+            height: 10vw;
+            margin-top: 20vw;
+        }
+
+        .width-grid {
+            width: 70%;
+        }
+
+        .bg2 {
+            background: url("https://cdn-images-1.medium.com/max/1200/0*2I0BPpOVZwX4SU0r.gif") repeat;
+            width: 100%;
+        }
+
+        .radius1 {
+            border-radius: 50%;
+        }
+
+        .test {
+            background-color: #104E8B;
+        }
+
+        .height {
+            height: 37.8vw;
+        }
+
+        .white {
+            color: white;
+        }
+
+        .icon {
+            position: absolute;
+            top: 20%;
+            left: 25%;
+            width: 240px;
+            height: 240px;
+            display: none;
+            background-color: #104E8B;
+            transform: rotate(45deg);
+            padding: 30px;
+            ;
+            border: 5px solid white;
+        }
+
+        .icon .row {
+            transform: rotate(-45deg);
+            margin: 15px;
+            text-align: center;
+        }
+
+        .icon i {
+            padding: 10px;
+        }
+
+        .get {
+            background-color: #104E8B;
+        }
+
+        .stat {
+            background-color: #104E8B;
+            width: 100%;
+        }
+
+        .logo:hover .icon {
+            display: block;
+        }
+
+        .logo:hover .img {
+            transform: scale(1.01);
+            overflow: hidden;
+
+        }
+
+        .logo img {
+            height: 400px;
+        }
+
+        .search1 {
+            font-size: 300%;
+            width: 20%;
+            position: absolute;
+            top: 20%;
+            left: 35%;
+            color: #104E8B;
+            display: block;
+        }
+
+        .search1:hover {
+            display: block;
+        }
+
+        .name2 {
+            padding: 0vw;
+            margin: 0.4vw;
+            font-size: 1.4vw;
+            border: 0px;
+            width: 35vw;
+        }
+
+        .name {
+            width: 40vw;
+            padding-top: 3%;
+            margin: 1vw;
+            display: inline-block;
+            padding: 1vw;
+            border-radius: 10px;
+        }
+
+        .mar {
+            margin-top: 100px;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+    <div class="main">
+        <div class="bg">
+
+            <nav class="navbar navbar-expand-sm navbar-light mx-5">
+
+                <div>
+                    <a class="navbar-brand" href="#">
+                        <img src="./Images/logo.svg" width="80" height="40" alt="image">
+                        <img src="./Images/title.png" width="100" height="40" alt="image">
+
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-menu"
+                        aria-controls="my-menu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="my-menu">
+                    <div class="ml-auto">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#" style="color:white;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:white;">Feautures</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:white;">Screenshots</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:white;">Download</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" style="color:white;" id="my-dropdown"
+                                    data-toggle="dropdown">News</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">News section</a>
+                                    <a class="dropdown-item" href="#">News page</a>
+                                    <a class="dropdown-item" href="#">SINGLE NEWS PAGE</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:white;">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:white;">FAQ'S</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" style="color:white;">Contact</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+
+
+            <center>
+
+                <div class="container-fluid">
+
+                    <div class="row ">
+
+                        <div class="col-md-8">
+
+                            <img src="./Images/title.png" width=60% style="margin-top:20%;" />
+                            <p style="color:white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+                                expedita possimus ad ullam laudantium in nulla nam necessitatibus quae inventore,
+                                repellendus recusandae fugit dicta distinctio quod eum laborum molestiae saepe?</p>
+                            <button
+                                style="border-radius:20px;width:25%;padding:1.8w;background-color:transparent;color:white;margin-top:5%;">
+                                <h6>find more about us</h6>
+                            </button>
+                        </div>
+
+                        <div id="my-carousel" class="carousel slide col-md-4" data-ride="carousel">
+
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators" style="position:absolute;top:101%;">
+                                <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#my-carousel" data-slide-to="1"></li>
+                                <li data-target="#my-carousel" data-slide-to="2"></li>
+
+                            </ol>
+
+                            <div class="carousel-inner active">
+
+
+                                <div class="carousel-item active">
+                                    <img class="d-block img-fluid" style="padding-top:5%;" src="./Images/1-1.png"
+                                        width=60% height=10vw alt="Slide 0">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block img-fluid" style="padding-top:5%;" src="./Images/1-2.png"
+                                        width=60% height=10vw alt="Slide 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block img-fluid" style="padding-top:5%;" src="./Images/1-3.png"
+                                        width=60% height=10vw alt="Slide 2">
+                                </div>
+
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </center>
+    <br><br>
+    <center>
+        <h1 class="clear">ABOUT APPERLE</h1>
+        <img class="pb-5" src="headerdecoration[151].svg" width=10% />
+    </center>
+    <center>
+        <div class="container-fluid">
+            <div class="row w-100">
+                <div class="col-md-4">
+                    <p> <i style="font-size:300%;background-color:#104E8B;color:white;border-radius:51%;padding:6%;"
+                            class="fas fa-snowflake"></i></p>
+                    <b>UNIQUE LAYOUT</b>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsa aut dolores placeat ea
+                        aperiam quasi deserunt totam odit beatae sunt dolor inventore magni exercitationem laudantium
+                        facilis ex, modi nihil.</p>
+
+                </div>
+                <div class="col-md-4 ">
+                    <p><i style="font-size:300%;background-color:#104E8B;color:white;border-radius:51%;padding:6%;"
+                            class="fas fa-pencil-alt"></i></p>
+                    <b>WELL DOCUEMENTED</b>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsa aut dolores placeat ea
+                        aperiam quasi deserunt totam odit beatae sunt dolor inventore magni exercitationem laudantium
+                        facilis ex, modi nihil.</p>
+
+                </div>
+                <div class=" col-md-4">
+                    <p> <i style="font-size:300%;background-color:#104E8B;color:white;border-radius:50%;padding:6%;box-shadow: #104E8B;"
+                            class="fab fa-superpowers"></i></p>
+                    <b>SUPER FAST</b>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ipsa aut dolores placeat ea
+                        aperiam quasi deserunt totam odit beatae sunt dolor inventore magni exercitationem laudantium
+                        facilis ex, modi nihil.</p>
+
+                </div>
+            </div>
+    </center>
+    </div><br>
+    <center>
+        <div class="main">
+            <div class="bg ">
+                <div style="color:white;">
+                    <h1 class="pt-3">FEATURES</h1>
+                    <img src="headerdecorationwhite.svg" width=10% />
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-8">
+                                    <h3 style="padding-top:20%;"><b class="white">SUPER FAST</b></h3>
+
+                                    <p class="white" style="text-align:jusify;">Lorem ipsum dolor sit amet,<br>
+                                        consectetur adipisicing elit Ipsum,<br> nisi!
+
+                                    </p>
+                                </div>
+                                <div class="col-4">
+                                    <i style="font-size:200%;margin-top:60%;color:white;background-color:#104E8B;border-radius:50%;width:50%;height:50px;top:2px;line-height:1.6;"
+                                        class="fas fa-rocket"></i>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-8">
+                                    <h3 style="padding-top:10%;"><b class="white">UNLIMITED FEATURES</b></h3>
+                                    <p class="white" style="text-align:jusify;">Lorem ipsum dolor sit amet,<br>
+                                        consectetur adipisicing elit Ipsum,<br> nisi!
+
+                                    </p>
+                                </div>
+                                <div class="col-4">
+                                    <i style="font-size:200%;margin-top:60%;color:white;background-color:#104E8B;border-radius:50%;width:50%;height:50px;top:2px;line-height:1.6;"
+                                        class="fas fa-lightbulb"></i>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-8">
+                                    <h3 style="padding-top:10%;"><b class="white">USER FRIENDLY</b></h3>
+                                    <p class="white" style="text-align:jusify;">Lorem ipsum dolor sit amet,<br>
+                                        consectetur adipisicing elit Ipsum,<br> nisi!
+
+                                    </p>
+                                </div>
+                                <div class="col-4">
+                                    <i style="font-size:200%;margin-top:60%;color:white;background-color:#104E8B;border-radius:50%;width:50%;height:50px;top:2px;line-height:1.6;"
+                                        class="fas fa-heart-broken"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="./Images/1-4.png" width=100% style="width:90%;padding-top:15%;" />
+                        </div>
+                        <div class="col-md-4">
+                            <div class="row">
+                                <div class="col-4">
+                                    <i style="font-size:200%;margin-top:60%;color:white;background-color:#104E8B;border-radius:50%;width:50%;height:50px;top:2px;line-height:1.6;"
+                                        class="fas fa-eye"></i>
+                                </div>
+                                <div class="col-8">
+                                    <h3 style="padding-top:20%;"><b class="white">RETINA READY</b></h3>
+                                    <p class="white" style="text-align:jusify;">Lorem ipsum dolor sit amet,<br>
+                                        consectetur adipisicing elit Ipsum,<br> nisi!
+
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <i style="font-size:200%;margin-top:60%;color:white;background-color:#104E8B;border-radius:50%;width:50%;height:50px;top:2px;line-height:1.6;"
+                                        class="fas fa-file-alt"></i>
+                                </div>
+                                <div class="col-8">
+
+                                    <h3 style="padding-top:10%;"><b class="white">WELL DOCUEMENTED</b></h3>
+                                    <p class="white" style="text-align:jusify;">Lorem ipsum dolor sit amet,<br>
+                                        consectetur adipisicing elit Ipsum,<br> nisi!
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <i style="font-size:200%;margin-top:60%;color:white;background-color:#104E8B;border-radius:50%;width:50%;height:50px;top:2px;line-height:1.6;"
+                                        class="fab fa-superpowers"></i>
+
+                                </div>
+                                <div class="col--8">
+                                    <h3 style="padding-top:10%;"><b class="white">SUPER POWERFUL</b></h3>
+                                    <p class="white" style="text-align:jusify;">Lorem ipsum dolor sit amet,<br>
+                                        consectetur adipisicing elit Ipsum,<br> nisi!
+
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+    </center>
+
+
+    <div style="background-color:lightgray;" class="container-fluid">
+        <center>
+
+            <h1 class="clear pt-5">SHOW CASE</h1>
+            <img src="headerdecoration[151].svg" width="10%" />
+
+            <p class="w-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta exercitationem beatae saepe
+                iure corrupti autem veniam ex voluptas quas!</p>
+        </center>
+        <div class="row">
+            <div class="col-md">
+                <h4> EYE CATCHING DETAILS:</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea dolorem, consectetur reprehenderit
+                    repudiandae rem nihil quo fuga culpa delectus iure quam, sed atque nobis velit quisquam, ut magnam
+                    at minus!</p>
+                <p> <i style="font-size:150%;color:#104E8B;" class="fas fa-rocket"></i>
+                    <b class="pl-3">SUPER FAST</b>
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p> <i style="font-size:150%;color:#104E8B;" class="fas fa-lightbulb"></i>
+                    <b class="pl-3">UNLIMITED FEATURES</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-md">
+                <img src="./Images/3-2.png" width=80% height=500 />
+                <div><img src="Images/3-1.png" width=80% height=500
+                        style="position: absolute;top:50px;padding-bottom:2%;" /></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color:lightgrey;">
+        <div class="row">
+            <div class="col-md">
+                <img src="Images/2-2.png" width=80% height=500 />
+                <div><img src="Images/2-1.png" width=80% height=500
+                        style="position: absolute;top:3%;left:70px;padding-bottom:5%;" /></div>
+            </div>
+            <div class="col-md">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas corporis, dolorum perspiciatis ea
+                    aliquam delectus temporibus nihil labore omnis impedit hic? </p>
+
+                <p><i style="font-size:150%;color:#104E8B;" class="fas fa-cogs"></i><b class="pl-3">UNIQUE CUSTOM
+                        DESIGN</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                <p><i style="font-size:150%;color:#104E8B;" class="fas fa-comments"></i><b class="pl-3">FULL CHAT</b>
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" style="background-color:lightgrey;">
+        <div class="row">
+            <div class="col-md">
+                <h4><b>AWESOME BUILD-IN FEATURES</b></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, sed natus voluptate iure laudantium,
+                    nulla voluptatem facilis voluptas vitae hic,</p>
+                <p> <i style="font-size:150%;color:#104E8B;" class="fas fa-eye"></i>
+                    <b class="pl-3">RETINA READY</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p><i style="font-size:150%;color:#104E8B;;" class="fas fa-heart-broken"></i>
+                    <b class="pl-3">USER-FRIENDLY</b></p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+            </div>
+
+            <div class="col-md">
+                <img src="./Images/3-1.png" width=80% height=500 />
+                <div><img src="Images/3-2.png" width=80% height=500
+                        style="position: absolute;top:50px;padding-bottom:2%;" /></div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+    <div style="background-color:black;height:20vw;padding:5vw;">
+        <div class="row">
+            <div>
+                <h1 class="white col"><b>SUBSCRIBE</b></h1>
+            </div>
+            <div class="col h-25">
+                <input style="padding:2vw;border-radius:5%;width:80%" class="col h-100" type="email" name="email"
+                    placeholder="email"></input>
+                <i style="background-color:#104E8B;color:white;font-size:350%;position:absolute;border-radius:20%;left:74%;top:2%;height:5.5vw;width:10%;padding-top:1%;padding-left:1%;"
+                    class="fab fa-telegram"></i>
+            </div>
+        </div>
+    </div>
+    <br>
+    <center>
+        <h1>SCREENSHOTS</h1>
+        <img style="color:white;" src="headerdecoration[151].svg" width="10%" />
+
+        <p class="w-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit in, officia enim modi velit
+            dolorem,sit amet consectetur adipisicing elit. Suscipit in, officia enim modi velit dolorem, dolore illo at
+            hic error facilis quas soluta cumque consequatur natus aliquam optio nobis! Saepe.</p>
+    </center>
+    <center>
+        <div class="w-25">
+
+            <img src="./Images/1-4.png" width=60% style="z-index:0;" />
+            <img src="./Images/1-2.png" width=60%
+                style="position:absolute;width:15%;opacity:0.7;left:33%;z-index:-1;" />
+            <img src="./Images/1-4.png" width=60%
+                style="position:absolute;width:15%;opacity:0.3;left:27%;z-index:-2;" />
+
+            <img src="./Images/1-3.png" width=60%
+                style="position:absolute;width:15%;opacity:0.7;right:33%;z-index:-1;" />
+            <img src="./Images/1-1.png" width=60%
+                style="position:absolute;width:15%;opacity:0.3;right:27%;z-index:-3;" />
+
+
+
+    </center>
+    </div>
+    <center>
+        <div class="w-50 container-fluid">
+
+
+        </div>
+    </center>
+    </div>
+    <br>
+    <div class="test">
+        <center>
+            <h1>TESTNIMONIALS</h1>
+            <img style="background-color:#104E8B;" src="headerdecorationwhite.svg" width="10%" />
+
+        </center>
+        <center>
+            <div id="my-carousel" class="carousel slide w-25" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ol class=" float-right carousel-indicators">
+                    <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#my-carousel" data-slide-to="1"></li>
+                    <li data-target="#my-carousel" data-slide-to="2"></li>
+
+                </ol>
+                <div class="carousel-inner">
+                    <center>
+
+                        <div class=" carousel-item active ">
+                            <img class="radius d-block img-fluid" src="./Images/testimonials1.jpg" alt="Slide 0" />
+                            <p style="color:white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Cupiditate, debitis! Hic eveniet perferendis non eos laborum eligendi sed velit dolore,
+                                tenetur deserunt incidunt cupiditate rem tempore adipisci? A, quam pariatur.</p>
+                            <b>JOHN DEO</b>
+                            <p class="w-25"> <img src="http://www.fendergrip.com/5star.png" width=100 height=50vw />
+                            </p> ̣
+                        </div>
+
+                        <div class=" carousel-item">
+                            <img class="radius d-block img-fluid" src="./Images/testimonials3.jpg" alt="Slide 1" />
+                            <p style="color:white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Cupiditate, debitis! Hic eveniet perferendis non eos laborum eligendi sed velit dolore,
+                                tenetur deserunt incidunt cupiditate rem tempore adipisci? A, quam pariatur.</p>
+                            <b>JOHN DEO</b>
+                            <p class="w-25"> <img src="http://www.fendergrip.com/5star.png" width=100 height=50vw />
+                            </p> ̣
+                        </div>
+                        <div class=" carousel-item">
+                            <img class="radius d-block img-fluid" src="./Images/testimonials4.jpg" alt="Slide 2" />
+                            <p style="color:white;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Cupiditate, debitis! Hic eveniet perferendis non eos laborum eligendi sed velit dolore,
+                                tenetur deserunt incidunt cupiditate rem tempore adipisci? A, quam pariatur.</p>
+                            <b>JOHN DEO</b>
+                            <p class="w-25"> <img src="http://www.fendergrip.com/5star.png" width=100 height=50vw />
+                            </p> ̣
+                        </div>
+
+
+                        <!-- Left and right controls -->
+
+
+                </div>
+            </div>
+
+
+    </div>
+    </center>
+    <br>
+    <center>
+        <h1>BEHIND THE STORY</h1>
+        <img src="headerdecoration[151].svg" width="10%" />
+
+        <p class="w-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis doloribus deserunt eaque pariatur
+            molestiae non reiciendis, sapiente optio maiores cumque at sint earum? Ipsa quas veniam magni sequi debitis.
+            Aspernatur!</p>
+    </center>
+    <!-- <div id="my-carousel" class="carousel slide w-25" data-ride="carousel"> 
+
+       
+        <ol class=" float-right carousel-indicators">
+            <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#my-carousel" data-slide-to="1" ></li>
+            <li data-target="#my-carousel" data-slide-to="2" ></li>
+            
+        </ol>
+        <div class="carousel-inner">-->
+    <center>
+        <div class="container">
+            <div class="row">
+                <div class="col-7 col-lg-4 mx-auto logo" style="box-shadow:1.5rem 1.5rem 1.5rem 1.5rem whitesmoke;">
+                    <div>
+                        <img class="img" src="./Images/team1.jpg" width=100% />
+                    </div>
+                    <div>
+                        <h3>SANDRA MORE</h3>
+                        <b>webdeveloper</b>
+                    </div>
+                    <div class="icon">
+
+                        <div class="row">
+                            <i style="font-size:300%;color:white; " class="fab fa-facebook-square"></i>
+                            <i style="font-size:300%;color:white;" class="fab fa-twitter-square"></i>
+
+                            <i style="font-size:300%;color:white;" class="fab fa-instagram"></i>
+                            <i style="font-size:300%;color:white;" class="fab fa-linkedin"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-7 col-lg-4 mx-auto logo">
+                    <a><img class="img" src="./Images/team3.jpg" width=100% /></a>
+                    <div style="box-shadow:1.5rem 1.5rem 1.5rem 1.5rem whitesmoke;" s>
+
+                        <h3>JOHN SHOW</h3>
+                        <b>webdeveloper</b>
+
+                    </div>
+                    <div class="icon">
+                        <div class="row">
+                            <i style="font-size:300%;color:white;" class="fab fa-facebook-square"></i>
+                            <i style="font-size:300%;color:white;" class="fab fa-twitter-square"></i>
+
+                            <i style="font-size:300%;color:white;" class="fab fa-instagram"></i>
+                            <i style="font-size:300%;color:white;" class="fab fa-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 col-lg-4  mx-auto logo" style="box-shadow:1.5rem 1.5rem 1.5rem 1.5rem whitesmoke;">
+                    <img class="img" src="./Images/team2.jpg" width=100% />
+                    <div>
+
+                        <h2>SANDRA MORE</h2>
+                        <b>webdeveloper</b>
+                        <div class="icon">
+                            <div class="row">
+                                <i style="font-size:300%;color:white;" class="fab fa-facebook-square"></i>
+                                <i style="font-size:300%;color:white;" class="fab fa-twitter-square"></i>
+
+                                <i style="font-size:300%;color:white;" class="fab fa-instagram"></i>
+                                <i style="font-size:300%;color:white;" class="fab fa-linkedin"></i>
+                            </div>
+                        </div>
+
+
+    </center>
+    <br style="clear:both;"><br>
+    <br>
+
+    <div class="get white">
+        <center>
+            <h1 class="pt-4"><b>GET IT NOW</b></h1>
+            <img src="headerdecorationwhite.svg" width=10% />
+        </center>
+        <p class="mx-5 my-5 col-7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto harum expedita minima
+            ea et alias cumque recusandae dolorem enim, tenetur inventore iure reprehenderit fugiat! Ratione quasi eos
+            fugit nesciunt laborum.</p>
+        <img src="appstore.png" width=100% style="width:15%;" />
+        <img src="appstore (1).png" style="width:15%;" />
+        <img src="windows.png" style="width:15%;" />
+        <button
+            style="border-radius:20px;background-color:#104E8B;color:white;width:10%;padding-top:1%;padding-bottom:1%;border:1px solid white;">scan
+            QR code</button>
+        <!-- <img style="background-color:#104E8B"src="Screenshot (6).png"style="width:5%;"/> -->
+    </div>
+
+
+
+
+    <section class="news container my-5">
+        <center>
+            <h2 class="headerdecoration my-5 text-center">LATEST NEWS</h2>
+            <img src="headerdecoration[151].svg" width=15% />
+        </center>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut unde doloremque fugit error
+            id corrupti iusto possimus tenetur beatae enim ab inventore veritatis labore quaerat, provident repellat,
+            ducimus voluptate eius.
+        </p>
+
+        <div class="row">
+            <div class="col-7 col-lg-4 mx-auto">
+                <div class="card p-0 ">
+                    <div class="card-header p-0 searchimg">
+                        <img src="./Images/news4.jpg" class="card-image-top img-fluid">
+                    </div>
+                    <div class="hoversearch">
+                        <div class="searchicon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="newsinfo">
+                            <div class="text-gray">
+                                <i class="fa fa-user smallicons mr-2"></i>
+                                <span>Jhon Deo</span>
+                            </div>
+
+                            <div class="textgray">
+                                <i class="fa fa-calendar smallicons mr-2"></i>
+                                <span>25 Oct. 1988</span>
+                            </div>
+                        </div>
+                        <h5 class="card-title textdarkgray">LOREM IPSUM DEO SIT</h5>
+                        <p class="card-text textgray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                            sint ipsa praesentium velit non corrupti, ea quaerat nam eligendi, incidunt ratione, nihil
+                            repellat reiciendis eius modi. Optio ex accusantium ipsam?
+                        </p>
+                        <button type="button" class="btn newsbtn">Read More
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-7 col-lg-4 mx-auto">
+                <div class="card p-0 ">
+                    <div class="card-header p-0 searchimg">
+                        <img src="./Images/news2.jpg" class="card-image-top img-fluid">
+                    </div>
+                    <div class="hoversearch">
+                        <div class="searchicon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="newsinfo">
+                            <div class="text-gray">
+                                <i class="fa fa-user smallicons mr-2"></i>
+                                <span>Jhon Deo</span>
+                            </div>
+
+                            <div class="textgray">
+                                <i class="fa fa-calendar smallicons mr-2"></i>
+                                <span>25 Oct. 1988</span>
+                            </div>
+                        </div>
+                        <h5 class="card-title textdarkgray">LOREM IPSUM DEO SIT</h5>
+                        <p class="card-text textgray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                            sint ipsa praesentium velit non corrupti, ea quaerat nam eligendi, incidunt ratione, nihil
+                            repellat reiciendis eius modi. Optio ex accusantium ipsam?
+                        </p>
+                        <button type="button" class="btn newsbtn">Read More
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-7 col-lg-4 mx-auto">
+                <div class="card p-0 ">
+                    <div class="card-header p-0 searchimg">
+                        <img src="./Images/news3.jpg" class="card-image-top img-fluid">
+                    </div>
+                    <div class="hoversearch">
+                        <div class="searchicon">
+                            <i class="fa fa-search"></i>
+                        </div>
+                        <div class="seennumber">
+
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="newsinfo">
+                            <div class="text-gray">
+                                <i class="fa fa-user smallicons mr-2"></i>
+                                <span>Jhon Deo</span>
+                            </div>
+
+                            <div class="textgray">
+                                <i class="fa fa-calendar smallicons mr-2"></i>
+                                <span>25 Oct. 1988</span>
+                            </div>
+                        </div>
+                        <h5 class="card-title textdarkgray">LOREM IPSUM DEO SIT</h5>
+                        <p class="card-text textgray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+                            sint ipsa praesentium velit non corrupti, ea quaerat nam eligendi, incidunt ratione, nihil
+                            repellat reiciendis eius modi. Optio ex accusantium ipsam?
+                        </p>
+                        <button type="button" class="btn newsbtn">Read More
+                            <i class="fa fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+    <br>
+
+    <div class="white test">
+        <center>
+            <h1 class="pt-5"><b>WATCH VIDEO</b></h1>
+            <img src="headerdecorationwhite.svg" width=10% />
+            <p class="w-50">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus nobis quaerat repudiandae
+                nemo quos impedit velit excepturi ipsum temporibus itaque quia, deserunt voluptatem molestias cumque
+                cupiditate odio aspernatur officiis harum.</p>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.9hlJfTGj5J7DO4Fccxtj9wAAAA&pid=Api&P=0&w=200&h=300"
+                class="mb-5" />
+        </center>
+    </div>
+    <br><br>
+    <center>
+        <h1><b>PRICES</b></h1>
+        <img src="headerdecoration[151].svg" width="10%" />
+
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit deleniti aut quae vero voluptate, in placeat
+            adipisci quod alias asperiores aperiam, vitae commodi cumque maxime tempore fugiat nulla amet pariatur?</p>
+
+    </center>
+    <div class="container-fluid">
+        <div class="row mar">
+            <div class="col-7 col-lg-3 mx-auto my-4" style="background-color:lightgrey;padding:20px;border-radius:10%;">
+                <center>
+                    <b>FREELAUNCHER</b>
+                    <hr>
+                    <p style="font-size:1.5vw;">$10.99<span>per/month</span>
+                        <p>
+                            <hr>
+                            <p>support forum</p>
+                            <p>Free hosting</p>
+                            <p>50GB free storage</p>
+                            <p>Admin area</p>
+                            <button  style="border-radius:20px;width:100%;height:7vw;border:1px black color;">Buy
+                                Now</button>
+                </center>
+            </div>
+            <br>
+            <div class="col-7 col-lg-3 mx-auto my-4" style="background-color:#104E8B;padding:2vw;border-radius:20px;">
+                <center>
+                    <b>ONE PROJECT</b>
+                    <hr>
+                    <p style="font-size:1.5vw;">$20.99<span>per/month</span>
+                        <p>
+                            <hr>
+                            <p>support forum</p>
+                            <p>Free hosting</p>
+                            <p>50GB free storage</p>
+                            <p>Admin area</p>
+
+                            <button style="border-radius:20px;width:100%;height:7vw;border:1px black color;">Buy
+                                Now</button>
+
+                </center>
+            </div>
+            <br>
+            <div class="col-7 col-lg-3 mx-auto my-4" style="background-color:lightgrey;padding:2vw;border-radius:20px;">
+                <center>
+                    <b>MULTIPLE PROJECTS</b>
+                    <hr>
+                    <p style="font-size:1.5vw;">$33.99<span>per/month</span>
+                        <p>
+                            <hr>
+                            <p>support forum</p>
+                            <p>Free hosting</p>
+                            <p>50GB free storage</p>
+                            <p>Admin area</p>
+                            <button style="border-radius:20px;width:100%;height:7vw;border:1px black color;">Buy
+                                Now</button>
+                </center>
+            </div>
+
+        </div>
+    </div><br>
+
+    <div class="get w-100 container-fluid">
+        <center>
+            <h1 class="white">STATASTICS</h1>
+            <img src="headerdecorationwhite.svg" width=10%; />
+            <p class="w-50 white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, repudiandae enim a
+                accusamus perferendis exercitationem corporis! Porro consectetur necessitatibus expedita, dolore
+                perferendis tenetur illum corrupti omnis, maxime maiores dolor quae.</p>
+        </center>
+        <div class="w-100">
+            <center>
+                <div class="row">
+                    <div class="col-md-3">
+                        <i style="color:white;font-size:250%;padding-left:15%;border-radius:50%;padding:20px;background-color:royalblue;"
+                            class="fas fa-heart"></i>
+                        <h5 class="white" style="padding-left:10%;">Happy Clients</h5>
+                        <p style="padding-left:10%;font-size:200%;font-family:arial;" class="white">1232</p>
+                    </div>
+
+                    <div class="col-md-3">
+                        <i style="color:white;font-size:250%;padding-left:15%;border-radius:50%;padding:20px;background-color:royalblue;"
+                            class="fas fa-cloud-download-alt"></i>
+                        <h5 class="white" style="padding-left:10%;">App Downloads</h5>
+                        <p style="padding-left:10%;font-size:200%;font-family:arial;" class="white">64K</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i style="color:white;font-size:250%;padding-left:15%;border-radius:50%;padding:20px;background-color:royalblue;"
+                            class="fab fa-reddit-alien"></i>
+                        <h5 class="white" style="padding-left:10%;">Active Users</h5>
+                        <p style="padding-left:10%;font-size:200%;font-family:arial;" class="white">1811</p>
+                    </div>
+                    <div class="col-md-3">
+                        <i style="color:white;font-size:250%;padding-left:15%;border-radius:50%;padding:20px;background-color:royalblue;"
+                            class="fas fa-star"></i>
+                        <h5 class="white" style="padding-left:10%;">Total Rates</h5>
+                        <p style="padding-left:10%;font-size:200%;font-family:arial;" class="white">232</p>
+                    </div>
+            </center>
+        </div>
+    </div>
+    </div>
+    <br style="clear:both;">
+    <center>
+        <h1><b>FAQ'S</b></h1>
+        <img src="headerdecoration[151].svg" width="10%" />
+
+        <p class="w-50">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque error dolores corrupti vel
+            amet eligendi. Velit repudiandae quam tempore at nobis praesentium ipsam assumenda obcaecati ipsum
+            laudantium. Perspiciatis, natus doloribus!</p>
+    </center>
+    <div class="container h-50">
+        <div class="row">
+            <div class="col-12 col-lg-5">
+                <img src="Images/1-3.png" width=100% height="auto" style="width:60%">
+                <img class="pb-5" src="Images/1-4.png" width=100% height="auto"
+                    style="position:absolute;left:60px;top:5px;width:60%">
+            </div>
+            <br style="clear:both;">
+            <br style="clear:both;">
+            <br style="clear:both;">
+
+
+            <div class="col-12 col-lg-7 mar">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne" style=" background-color:#104E8B;">
+                            <p style="float:left;margin:2%;color:white;font-size:1rem"><i style="margin-left:0px;"
+                                    class="fas fa-comment"></i><b>WHY THIS APP IS SO AWESOME?</b></p>
+                            <button class="btn btn-link porus" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                                style="font-size: 1.5rem;float:right;text-decoration: none;padding:0px;">
+                                &#43;
+                            </button>
+                        </div>
+
+                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                                squid.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo" style="background-color:#104E8B;">
+                            <p style="float:left; margin-top:2%;color:white;font-size:1rem"><i style="margin-left:0px;"
+                                    class="fas fa-comment"></i><b>CANI GET DISCOUNT MY INVITING FRIENDS?</b></p>
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="true" aria-controls="collapseTwo"
+                                style="font-size: 1.5rem;float:right;text-decoration: none;padding:0px;">
+                                &#43;
+                            </button>
+                        </div>
+
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eaque voluptate
+                                    voluptates accusamus modi ullam blanditiis? Optio fugiat tempore expedita reiciendis
+                                    quas veniam ipsam iusto dolorem quam ea, ratione voluptatibus!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingThree" style="background-color:#104E8B;">
+                            <p style="float:left; margin-top:2%;color:white;font-size:1rem"><i style="margin-left:0px;"
+                                    class="fas fa-comment"></i><b>LOREM IPSUM SIT AMET,ADIPSING?</b></p>
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo"
+                                style="font-size: 1.5rem;float:right;text-decoration: none;padding:0px;">
+                                &#43;
+                            </button>
+                        </div>
+
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eaque voluptate
+                                    voluptates voluptatibus!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingFour" style="background-color:#104E8B;">
+                            <p style="float:left; margin-top:2%;color:white;font-size:1rem"><i style="margin-left:0px;"
+                                    class="fas fa-comment"></i><b>LOREM IPSUM SIT AMET,ADIPSING?</b></p>
+                            <button class="btn btn-link" type="button" data-toggle="collapse"
+                                data-target="#collapseFour" aria-expanded="true" aria-controls="collapseTwo"
+                                style="font-size: 1.5rem;float:right;text-decoration: none;padding:0px;">
+                                &#43;
+                            </button>
+                        </div>
+
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionExample">
+                            <div class="card-body">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, eaque voluptate
+                                    voluptates accusamus modi ullam blanditiis? Optio fugiat tempore expedita reiciendis
+                                    quas veniam ipsam iusto dolorem quam ea, ratione voluptatibus!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <br style="clear:both;">
+
+            <div style="width:100%;">
+                <img src="Images/map.png" alt="" style="width:100%;">
+                <div class="container-fluid">
+                    <center>
+                        <h1 style="text-align: center;">GET IN TOUCH</h1>
+                        <img src="headerdecoration[151].svg" width=18% />
+                    </center>
+                    <div class="row">
+                        <div class=" col-12 col-lg-6">
+                            <i style="color:black;font-size:200%;padding-top:3%;" class="far fa-user"></i>
+                            <input id="firstname" type="text" class="name2" placeholder="*Name" name="firstname"
+                                style="text-align: left;border-bottom: 2px solid black;"><br>
+                            <i style="color:black;font-size:200%;padding-top:3%;" class="far fa-paper-plane"></i>
+                            <input id="firstname" type="text" class="name2" placeholder="*email" name="firstname"
+                                style="text-align: left;border-bottom: 2px solid black;"><br>
+                            <i style="color:black;font-size:200%;padding-top:3%;" class="far fa-envelope"></i>
+                            <input id="firstname" type="text" class="name2" placeholder="*message" name="firstname"
+                                style="text-align: left;border-bottom: 2px solid black;"><br>
+                            <input type="submit" value="Send Message" class="name"
+                                style="background-color:rgb(12, 129, 238);color:white;text-align: center;">
+                        </div>
+                        <div class=" col-12 col-lg-6 pl-3"><br><br>
+                            <p> <i style="color:black;font-size:150%;float:left;"
+                                    class="fas fa-map-marker-alt"></i><span style="float: left;">15 Bath Rd, Heathrow,
+                                    Longford, Hounslow TW6 2AB, UK</span></p>
+                            <br>
+                            <i style="color:black;font-size:150%;float:left;" class="fas fa-phone-alt"></i><span
+                                style="float: left;">+44 171 127 8528</span><br style="clear: both;">
+                            <br>
+                            <i style="color:black;font-size:150%;float:left;" class="fas fa-paper-plane"></i><span
+                                style="float: left;">perla.app@example.com</span><br style="clear: both;">
+                            <br>
+                            <i style="color:white;background-color:skyblue;border-radius:50%;font-size:170%;padding:5px"
+                                class="fab fa-twitter"></i>
+                            <i style="color:white;background-color:orange;border-radius:50%;font-size:170%;padding:5px"
+                                class="fab fa-instagram"></i>
+                            <img src="Screenshot (11).png" width=19% />
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="container-fluid" style="background-color: grey;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>About Us</h3>
+                            <img src="Images/logo.svg" alt="" style="width:40px;"><br>
+                            <img src="Images/title.png" alt="" style="width:200px;">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum inventore dolores aliquam
+                                qui nam modi quis temporibus blanditiis, impedit ullam minima sequi quia expedita optio
+                                nobis nulla nesciunt autem quasi?</p>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>News</h3>
+                            <img src="Images/news4.jpg" alt="" style="width:150px;"><a href=""
+                                style="text-decoration: none;color:black;font-size:12px;">lorem ipsum ident</a><br><br>
+                            <img src="Images/news2.jpg" alt="" style="width:150px;"><a href=""
+                                style="text-decoration: none;color:black;font-size:12px;">lorem ipsum ident</a>
+                        </div>
+                        <div class=" col-3 col-lg-3">
+                            <h3>Tags</h3>
+                            <a href=""
+                                style="background-color: lightgrey;border-radius:10px;padding:3px;text-decoration: none;color:black;margin:5px;">
+                                App</a>
+                            <a href=""
+                                style="background-color: lightgrey;border-radius:20px;padding:3px;text-decoration: none;color:black;margin:5px;">Apperle</a>
+                            <a href=""
+                                style="background-color: lightgrey;border-radius:20px;padding:3px;text-decoration: none;color:black;margin:5px;">Google</a><br><br>
+                            <a href=""
+                                style="background-color: lightgrey;border-radius:10px;padding:1px;text-decoration: none;color:black;margin:5px;">Android</a>
+                            <a href=""
+                                style="background-color: lightgrey;border-radius:20px;padding:1px;text-decoration: none;color:black;margin:5px;">Apple</a>
+                            <a href=""
+                                style="background-color: lightgrey;border-radius:20px;padding:1px;text-decoration: none;color:black;margin:5px;">Watch
+                                </a<br><br><br>
+                                <a href=""
+                                    style="background-color: lightgrey;border-radius:20px;padding:1px;text-decoration: none;color:black;margin:5px;">News</a>
+                                <a href=""
+                                    style="background-color: lightgrey;border-radius:10px;padding:1px;text-decoration: none;color:black;margin:5px;">Download</a>
+                                <a href=""
+                                    style="background-color: lightgrey;border-radius:20px;padding:1px ;text-decoration: none;color:black;margin:5px;">Apperle</a><br><br>
+                                <a href=""
+                                    style="background-color: lightgrey;border-radius:10px;padding:1px;text-decoration: none;color:black;margin:5px;">Google</a>
+                                <a href=""
+                                    style="background-color: lightgrey;border-radius:20px;padding:1px;text-decoration: none;color:black;margin:5px;">Android</a>
+                                <a href=""
+                                    style="background-color: lightgrey;border-radius:20px;padding:1px;text-decoration: none;color:black;margin:5px;">Apple</a><br><br>
+                                <a href=""
+                                    style="background-color: lightgrey;border-radius:10px;padding:1px;text-decoration: none;color:black;margin:5px;">Watch</a>
+                                <a href=""
+                                    style="background-color: lightgrey;border-radius:20px;padding:1px;text-decoration: none;color:black;margin:5px;">News</a>
+                                <a href=""
+                                    style="background-color: lightgrey;border-radius:20px;padding:1px;text-decoration: none;color:black;margin:5px;">Download</a>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Instagram Feed</h3>
+                            <img src="Images/news4.jpg" alt="" style="width:120px;">
+                            <img src="Images/news1.jpg" alt="" style="width:120px;"><br><br>
+                            <img src="Images/news2.jpg" alt="" style="width:120px;">
+                            <img src="Images/news3.jpg" alt="" style="width:120px;">
+                        </div>
+
+                        <p class="pl-5" style="float:left;">Copyright © 2017 Apperle HTML template by <span
+                                style="color:blue;">Perle</span> </p>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
